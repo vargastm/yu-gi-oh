@@ -1,0 +1,42 @@
+.card-info {
+  background: #707070;
+  padding: 50px 20px;
+  width: 20%;
+  margin: 0 0 0 auto;
+  color: #FFFFFF;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.card-info.normal-monster {
+  background: #BB9041;
+}
+
+.card-info.trap-card {
+  background: #AC3880;
+}
+
+.card-info.spell-card {
+  background: #058B75;
+}
+
+.card-info.fusion-monster {
+  background: #853F91
+}
+
+.card-info.effect-monster, .card-info.flip-effect-monster {
+  background: #b0592b;
+}
+
+.card-info img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.card-info h2 {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.card-info p {
+  margin-bottom: 10px;
+}
