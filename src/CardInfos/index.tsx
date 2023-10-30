@@ -32,7 +32,7 @@ const CardInfos: React.FC<CardInfosProps> = ({ card }) => {
         <img src={card.card_images[0].image_url_cropped} alt={card.name}/>
         <p>Tipo: {card.type}</p>
         {card.atk && <p>Ataque: {card.atk}</p>}
-        {card.def && <p>Defsa: {card.def}</p>}
+        {card.def && <p>Defesa: {card.def}</p>}
         {card.level && <p>Level: {card.level}</p>}
         {card.attribute && <p>Atributo: {card.attribute}</p>}
         <p>Raça: {card.race}</p>
