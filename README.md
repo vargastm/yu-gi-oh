@@ -1,4 +1,4 @@
-##YU-GI-OH
+## YU-GI-OH
 
 ### ♟ Summary
 
