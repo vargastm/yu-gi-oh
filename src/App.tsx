@@ -24,7 +24,7 @@ function App() {
   const [cards, setCards] = useState([])
   const [selectedCard, setSelectedCard] = useState<CardInfosProps>();
   const [searchTerm, setSearchTerm] = useState('');
-  const [cardSize, setCardSize] = useState("medium"); // Valor padrão é "medium"
+  const [cardSize, setCardSize] = useState("medium");
   
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
@@ -53,19 +53,23 @@ function App() {
 
   return (
     <>
-      <div>
-        <input type="text" onChange={handleSearchChange} />
-        <select name="cardWidth" id="cardWidth" onChange={handleSelectChange}>
-          <option value="small">Pequeno</option>
-          <option value="medium" selected>Médio</option>
-          <option value="large">Grande</option>
-        </select>
-      </div>
       <div className="content">
-        <div className={`card-list ${cardSize}`}>
-          {filteredCards.map(card => (
-            <Card card={card} onClick={() => openCardInfo(card)}/>
-          ))}
+        <div className="left-container">
+          <div className="header-card-list">
+            <a href="#">Voltar</a>
+            <input placeholder="Pesquisar" type="text" onChange={handleSearchChange} className="defaultInput" />
+            <a href="#">Filtros</a>
+            <select name="cardWidth" id="cardWidth" onChange={handleSelectChange}>
+              <option value="small">Pequeno</option>
+              <option value="medium" selected>Médio</option>
+              <option value="large">Grande</option>
+            </select>
+          </div>
+          <div className={`card-list ${cardSize}`}>
+            {filteredCards.map(card => (
+              <Card card={card} onClick={() => openCardInfo(card)}/>
+            ))}
+          </div>
         </div>
         {selectedCard && <CardInfos card={selectedCard} />}
       </div>
