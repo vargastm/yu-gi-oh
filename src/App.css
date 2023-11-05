@@ -56,8 +56,16 @@ table {
   justify-content: center;
 }
 
-.card-list img {
+.card-list.small img {
   max-width: 80px;
+}
+
+.card-list.medium img {
+  max-width: 120px;
+}
+
+.card-list.large img {
+  max-width: 200px;
 }
 
 .content {
